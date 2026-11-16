@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ByteBot Quest</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <div class="brand-icon">B</div>
+          <div>
+            <p class="eyebrow">STUDENT QUEST</p>
+            <h1>ByteBot Quest</h1>
+          </div>
+        </div>
+
+        <div class="hud">
+          <div class="stat-card">
+            <span>Lvl</span>
+            <strong id="levelLabel">1</strong>
+          </div>
+          <div class="stat-card">
+            <span>XP</span>
+            <strong id="xpLabel">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>Coins</span>
+            <strong id="coinLabel">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="arena">
+        <aside class="left-panel panel">
+          <div class="panel-header">
+            <h2>Avatar</h2>
+          </div>
+          <div class="avatar-scene">
+            <div class="avatar">
+              <div class="head"></div>
+              <div class="body"></div>
+              <div class="arm arm-left"></div>
+              <div class="arm arm-right"></div>
+              <div class="leg leg-left"></div>
+              <div class="leg leg-right"></div>
+            </div>
+          </div>
+          <div class="status-box">
+            <p class="label">Quest Rank</p>
+            <h3 id="rankLabel">Byte Rookie</h3>
+          </div>
+          <div class="xp-bar-wrap">
+            <div class="xp-bar-label-row">
+              <span>Progress</span>
+              <span id="xpPercentLabel">0%</span>
+            </div>
+            <div class="xp-bar">
+              <div id="xpBarFill" class="xp-bar-fill"></div>
+            </div>
+          </div>
+        </aside>
+
+        <section class="main-panel panel">
+          <div class="quest-banner">
+            <div>
+              <p class="eyebrow">Current Mission</p>
+              <h2 id="missionTitle">Boot Up Challenge</h2>
+            </div>
+            <button id="startButton" class="start-btn">Start Quest</button>
+          </div>
+
+          <div id="questionCard" class="question-card hidden">
+            <p class="question-tag">Level <span id="levelNumber">1</span></p>
+            <h3 id="questionText">Question goes here</h3>
+            <div id="answers" class="answers"></div>
+          </div>
+
+          <div id="feedbackBox" class="feedback-box hidden"></div>
+
+          <div class="reward-strip">
+            <div>
+              <span class="tiny-label">Reward</span>
+              <strong id="rewardLabel">50 XP</strong>
+            </div>
+            <div>
+              <span class="tiny-label">Goal</span>
+              <strong id="goalLabel">Learn hardware basics</strong>
+            </div>
+          </div>
+        </section>
+
+        <aside class="right-panel panel">
+          <div class="panel-header">
+            <h2>Quest Log</h2>
+          </div>
+          <ul id="questList" class="quest-list"></ul>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
